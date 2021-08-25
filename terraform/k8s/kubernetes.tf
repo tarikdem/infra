@@ -322,7 +322,7 @@ resource "aws_launch_template" "master-eu-west-1a-masters-k8s-infra-tova-sh" {
     name = aws_iam_instance_profile.masters-k8s-infra-tova-sh.id
   }
   image_id      = "ami-0298c9e0d2c86b0ed"
-  instance_type = "t3.medium"
+  instance_type = "t3a.small"
   key_name      = aws_key_pair.kubernetes-k8s-infra-tova-sh-734d6cb299efa9a73da914be7e352f0d.id
   lifecycle {
     create_before_destroy = true
@@ -405,7 +405,7 @@ resource "aws_launch_template" "nodes-eu-west-1a-k8s-infra-tova-sh" {
     name = aws_iam_instance_profile.nodes-k8s-infra-tova-sh.id
   }
   image_id      = "ami-0298c9e0d2c86b0ed"
-  instance_type = "t3.medium"
+  instance_type = "t3a.small"
   key_name      = aws_key_pair.kubernetes-k8s-infra-tova-sh-734d6cb299efa9a73da914be7e352f0d.id
   lifecycle {
     create_before_destroy = true
